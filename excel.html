@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="excel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <button class="dummy">Home</button> 
+        <div class="newOpenSave">
+            <button class="file dropDown">File</button> 
+            <div class="hidden " id="myDropdown">
+                <div class="new"> New</div>
+                <input type="file" id="open" style="display:none;" class="openFile"/>
+                <label for="open"  class="openFile">Open</label>
+                <div class="save"  class="openFile" >Save</div>
+            </div>  
+        </div>
+        <button class="dummy">View</button> 
+        <button class="dummy">Insert</button> 
+       
+    </div>
+    <div class="menu-container">
+        <select class="font-size" selected>
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16" selected>16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+            <option value="28">28</option>
+            <option value="32">32</option>
+        </select>
+        <select class="font-family">
+            <option value="monospace">monospace</option>
+            <option value="sans-serif">sans-serif</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Cursive">Cursive</option>
+            <option value="Courier New">Courier New</option>
+            <option value="FreeMono">FreeMono</option>
+            <option value="Brush Script MT">Brush Script MT</option>
+        </select>
+     
+        <div class="bui-container">
+            <i class="fas fa-bold bold"></i>
+            <i class="fas fa-underline underline"></i>
+            <i class="fas fa-italic italic"></i>
+        </div>
+         <!--alignmnet -->
+         <div class="align-container">
+            <i class="fas fa-align-right right"  title="right align"></i>
+            <i class="fas fa-align-left left" title="left align" ></i>
+            <i class="fas fa-align-center center" title="center align"></i>
+        </div>
+        <!--color -->
+        <div class="color-container">
+            <input type="color"  title="text color" value="#f6b73c" class="fas fa-fill color" ></input>
+            <input type="color"   title="backGround color" value="#e66465" class="fas fa-palette bg-color" ></input>
+        </div>
+    </div> 
+    <div class="formula-container">
+        <input type="text" class="address-input" readonly>
+        <input type="text" class="formula-input">
+    </div>
+    <div class="grid-container">
+        <div class="left-box  box "></div>
+        <div class="top-row ">
+               <!--  a b ....-->
+        </div>
+        <div class="left-col ">
+             <!--   100 ....-->
+        </div>
+        <div class="grid">
+                 <!--  100*26....-->
+        </div>
+    </div>
+    <div class="sheets-container">
+        <div class="add-sheet_btn-container fas fa-plus-circle"></div>
+        <div class="sheet-list">
+            <div class="sheet active" idx="0">Sheet1</div>
+        </div>
+    
+        
+    </div>
+    <script src="grid.js"></script>
+    <script src="excel.js"></script>
+    <script src="formula.js"></script>
+    <script src="newOpenSave.js"></script>
+    <script src="infix.js"></script>
+</body>
+</html>
